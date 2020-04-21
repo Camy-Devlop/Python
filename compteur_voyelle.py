@@ -13,5 +13,7 @@ class Voyelle:
     def recherche():
         print("bonjour")
     
+    def recherche2():
+        print("bonjour2")
 v=Voyelle()
 v.get_voyelle_numbers("patrik")
