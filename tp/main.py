@@ -1,4 +1,6 @@
 
+#importation de la classe ListMots 
+
 from pkg.tplist import ListMots 
 
 class main:
