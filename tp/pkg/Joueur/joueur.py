@@ -1,6 +1,7 @@
 #heritage de la classe personne 
 from personne import Personne
 
+
 #joueur 
 class Joueur(Personne):
 
