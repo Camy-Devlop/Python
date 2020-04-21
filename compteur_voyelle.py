@@ -13,5 +13,8 @@ class Voyelle:
     def recherche():
         print("bonjour")
     
+    #c'est ok test pour le git
+    def recherche2():
+        print("bonjour2")
 v=Voyelle()
 v.get_voyelle_numbers("patrik")
