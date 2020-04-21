@@ -14,10 +14,7 @@ class ListMots:
     
     def melanger_mot_List(self):
         print("liste dans la classe "+str(self.list_mot))
-        m=self.list_mot
-        
-        
-        return  m
+        return  self.list_mot
 
 
 
