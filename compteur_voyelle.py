@@ -13,7 +13,7 @@ class Voyelle:
     def recherche():
         print("bonjour")
     
-   #chocolat test
+   #chocolat test pipi
     def recherche2():
         print("bonjour2")
 v=Voyelle()
