@@ -14,6 +14,7 @@ class ListMots:
     
     def melanger_mot_List(self):
         print("liste dans la classe "+str(self.list_mot))
+        shuffle(self.list_mot)
         return  self.list_mot
 
 
