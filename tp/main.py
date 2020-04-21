@@ -3,6 +3,8 @@
 
 #from pkg.tplist import ListMots 
 from pkg.Joueur.joueur import Joueur
+from pkg.Joueur.personne import Personne
+from pkg.Joueur.vie import Vie
 class main:
 
     #l=ListMots()
