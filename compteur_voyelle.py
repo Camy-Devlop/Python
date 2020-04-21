@@ -9,6 +9,9 @@ class Voyelle:
     def recher_voyelle(lettre):
         lettre=lettre.lower()
         x=0
-
+    
+    def recherche():
+        print("bonjour")
+    
 v=Voyelle()
 v.get_voyelle_numbers("patrik")
