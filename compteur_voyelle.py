@@ -13,7 +13,7 @@ class Voyelle:
     def recherche():
         print("bonjour")
     
-    #c'est ok test pour le git h j
+    #c'est ok test pour le git h j k
     def recherche2():
         print("bonjour2")
 v=Voyelle()
