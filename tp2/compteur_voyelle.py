@@ -56,4 +56,4 @@ class Voyelle:
 ll=Voyelle()
 ll.get_numbers_voyelle("patrikmddd")
 print() 
- 
+ #pas encore fini 
