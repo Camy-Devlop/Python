@@ -40,12 +40,12 @@ class Voyelle:
 
     # fonction recherche voyelle 
     def recher_voyelle(self,lettre):
-        cpt=0
+        
         for xx in list(self.mot):
             if xx==lettre:
                 self.liste_voyelle_trouver[self.voyelle.index(lettre)][1]+=1
                 pass
-            cpt+=1
+            
 
     def get_t(self):
         return self.liste_voyelle_trouver
