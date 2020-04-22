@@ -49,7 +49,11 @@ class Voyelle:
             if xx==lettre:
                 self.liste_voyelle_trouver[self.voyelle.index(lettre)][1]+=1
                 
-
+    def total_voyelle(self):
+        tmp=0
+        for l in range(len(self.voyelle)):
+            tmp +=self.liste_voyelle_trouver[self.voyelle.index(list(self.voyelle)[l])][1]
+        return tmp
 #v.get_numbers_voyelle("patrik")sh
 
 ll=Voyelle()
@@ -58,4 +62,5 @@ print(ll.liste_voyelle_trouver)
 ll.affiche_voyelle_trouver()
 print("========================================================")
 ll.affiche_voyelle_yapas()
-
+print("========================================================")
+print("voici le nombre total de voyelle {}".format(ll.total_voyelle()))
