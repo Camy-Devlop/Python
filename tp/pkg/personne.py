@@ -2,7 +2,7 @@ from vie import Vie
 class Personne(Vie):
 
     def __init__(self,nom,prenom="",date_nessance="",sexe=""):
-        super(self).__init__(True)
+        super(Vie).__init__(True)
         self.nom=nom
         self.prenom=prenom
         self.date=date

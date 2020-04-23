@@ -1,9 +1,10 @@
 from pkg.vie import Vie
 from pkg.personne import Personne
-from pkg.joueur import Joueur
+#from pkg.joueur import Joueur
 
 
-class main():
+class main(object):
 
-    j=Vie(True)
-    print("nom du joueur ",j.get_etat_Vie())
+    j=Personne("Pat")
+    
+    print("nom du joueur ",)
