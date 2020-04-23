@@ -1,8 +1,8 @@
 from vie import Vie
-class Personne:
+class Personne(Vie):
 
-    def __init__(self,nom,prenom="",date_nessance="",sexe=None):
-        super().__init__(True)
+    def __init__(self,nom,prenom="",date_nessance="",sexe=""):
+        super(self).__init__(True)
         self.nom=nom
         self.prenom=prenom
         self.date=date
