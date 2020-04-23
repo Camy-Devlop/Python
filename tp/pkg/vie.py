@@ -1,4 +1,4 @@
-class Vie(object):
+class Vie():
 
     def __init__(self,vivant):
         self.vivant=vivant

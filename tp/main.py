@@ -1,4 +1,4 @@
-from pkg.vie import Vie
+#from pkg.vie import Vie
 from pkg.personne import Personne
 #from pkg.joueur import Joueur
 
