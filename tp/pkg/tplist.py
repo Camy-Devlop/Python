@@ -2,7 +2,7 @@ from random import shuffle
 #la classe test cree une liste mot quelle va demander a l'utilisateur d'introduire
 # en separant les mot avec un '/' 
 #  
-class ListMots:
+class ListMots():
 
     #création de l'attribue 
     list_mot=[]
