@@ -1,4 +1,5 @@
 
+#! /usr/bin/python3
 class Voyelle:
     # attribue voyalle c'est un string qui contient toute les voyelle
     # attribue liste_voyelle_trouver permet de stoker le voyelle trouver en tableau a deux dimention 
@@ -42,6 +43,7 @@ class Voyelle:
                 if 0<self.liste_voyelle_trouver[self.voyelle.index(list(self.voyelle)[l])][1]:
                     print("voici la voyelle {} trouver {}".format(list(self.voyelle)[l],self.liste_voyelle_trouver[self.voyelle.index(list(self.voyelle)[l])][1]))
              
+ 
     # fonction recherche voyelle et met a jour dans le tableau a deux dimantion
     def recher_voyelle(self,lettre):
         
