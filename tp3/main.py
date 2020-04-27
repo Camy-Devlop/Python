@@ -1,28 +1,22 @@
 
+#! /usr.bin/python3
+
+
 from Pkg.Batiments.Immeuble import Immeuble
 from Pkg.Batiments.Appartement import Appartement 
 
 class main:
   
-      print("bienvenu dans ma ville")
+    print("bienvenu dans ma ville")
      
-      app=list()
-      a=list()
-      b=list()
-     # for i in range(10):
-      #    for j in range(9):
-       #       a.append(Appartement(i,str(chr(j+97))))
-        
-       # app.append(a)
+    app=list()
+    a=list()
       
-      a.append([2,3,4,5,6])
-
-      #b.append(["a","b","c","d"])
-      b.append("a")
-      b.append("b")
-      b.append("c")
-      b.append("d")
-
-      app.append(a[0])
-      app.append(b)  
-      print(app)
+    for i in range(10):
+        a.clear()
+        for j in range(9):
+            a.append(Appartement(i,str(chr(j+97))))
+              
+        app.append(a)
+      
+    print(app[1][2].get_

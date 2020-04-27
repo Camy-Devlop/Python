@@ -1,4 +1,6 @@
 
+#! /usr.bin/python3
+
 from Pkg.Batiments.Batiment import Batiment
 class Maison(Batiment):
       
