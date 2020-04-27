@@ -19,4 +19,4 @@ class main:
               
         app.append(a)
       
-    print(app[1][2].get_
+    
