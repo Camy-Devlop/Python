@@ -9,7 +9,7 @@ class main(object):
   
     print("bienvenu dans ma ville")
     window =Tk()
-    label = Label(fenetre, text="Hello World")
+    label = Label(window, text="Hello World")
     label.pack()
 
     window.mainloop()
