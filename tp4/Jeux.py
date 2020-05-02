@@ -1,11 +1,11 @@
-from random import shuffle as molo
-
-
-        
+   
 #! /usr/bin/python3
 
-from joueur import Joueur
-from paquet import Un_paquet_cartes
+from random import shuffle as molo
+from Module.joueur import Joueur
+from Module.paquet import Un_paquet_cartes
+
+
 class main:
     
     print("hello bienvenue au jeux")

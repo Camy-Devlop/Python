@@ -1,4 +1,4 @@
-from carte import Carte
+from Module.carte import Carte
 class Un_paquet_cartes:
     
     list_color=["bleu","rouge","vert","jaune"]
