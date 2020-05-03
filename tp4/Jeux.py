@@ -17,3 +17,8 @@ class main:
     
     m.get_carte(0)
     m.get_nombre_carte()
+    m.cree_carte_special_couleur()
+    m.get_nombre_carte()
+    m.cree_carte_special()
+    m.get_nombre_carte()
+    m.get_carte(102)

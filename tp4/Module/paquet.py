@@ -5,8 +5,9 @@ class Un_paquet_cartes:
     paquet=[]
     #les carte special le 2x , § changement sens
     # @ stop et le * depot de carte de meme couleur
-    list_spetial_couleur=["2￼x","§","@","*"]
-    
+    dico_spetial_couleur={"2￼x":2,"§":1,"@":2,"*":2}
+    dico_special={"4c":4,"4c4x":1,"4c2x":4}
+
     def __init__(self,nombre=9):
         self.nombre=nombre
         self.cree_paquet()
@@ -25,8 +26,13 @@ class Un_paquet_cartes:
         print(len(self.paquet))
         
     def cree_carte_special_couleur(self):
-        pass
-    
+        for c in self.list_color:
+            for key , val in self.dico_spetial_couleur.items():
+                for v in range(val):
+                    self.paquet.append(Carte(c,key))
+
     def cree_carte_special(self):
-        pass
+            for key , val in self.dico_special.items():
+                for v in range(val):
+                    self.paquet.append(Carte(key))
     

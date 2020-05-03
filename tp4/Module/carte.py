@@ -1,5 +1,5 @@
 class Carte:
-    def __init__(self, couleur,val):
+    def __init__(self, couleur,val=None):
         self.couleur=couleur
         self.val=val
         
@@ -10,4 +10,7 @@ class Carte:
         return self.val
         
     def __str__(self):
-        return self.get_couleur()+" "+str(self.get_val())
+        if self.get_val()!=None:
+            return self.get_couleur()+" "+str(self.get_val())
+        else:
+            return self.get_couleur()
