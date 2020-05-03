@@ -16,7 +16,7 @@ class main:
     print("ok")
     
     m.get_carte(0)
-    m.get_nombre_carte()
+    
     m.cree_carte_special_couleur()
     m.get_nombre_carte()
     m.cree_carte_special()
