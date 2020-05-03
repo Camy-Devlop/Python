@@ -1,4 +1,8 @@
 
 
 class Table_jeux:
-    pass
+    
+    def __init__(self, parameter_list):
+        pass
+
+    
