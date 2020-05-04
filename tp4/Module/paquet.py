@@ -27,6 +27,9 @@ class Un_paquet_cartes:
     def get_carte(self,n):
         print(self.paquet[n])
     
+    def get_carte1(self,n:int):
+        print(self.paquet[n])
+    
     #returne nombre de carte total 
     def get_nombre_carte(self):
         print(len(self.paquet))

@@ -4,7 +4,8 @@
 from random import shuffle as molo
 from Module.joueur import Joueur
 from Module.paquet import Un_paquet_cartes
-
+from Module.regle import Regle
+from Module.carte import Carte
 # c'est un vieux jeux UNO que je voudrais realiser 
 #petit defi perso
 
@@ -15,10 +16,10 @@ class main:
     j=Joueur()
     print("ok")
     
-    m.get_carte(0)
-    
     m.cree_carte_special_couleur()
-    m.get_nombre_carte()
     m.cree_carte_special()
-    m.get_nombre_carte()
-    m.get_carte(102)
+
+    reg=Regle()
+    carte1=Carte("bleu",3)
+    carte2=Carte("jaune",9)
+    print(reg.verifie_deposer(carte1,carte2))
