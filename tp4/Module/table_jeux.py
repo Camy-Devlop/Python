@@ -6,12 +6,12 @@ from Module.paquet import Un_paquet_cartes
 class Table_jeux:
     
     couleur_demander:str
-    joueurs:Joueur=[Joueur(),Joueur("CamyBot")]
+    
     reg=Regle()
     paquet=Un_paquet_cartes()
     paquet.cree_carte_special_couleur()
     paquet.cree_carte_special()
     def __init__(self):
-        pass
+        self.joueurs:Joueur=[Joueur(),Joueur("CamyBot")]
 
     
