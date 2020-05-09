@@ -1,4 +1,5 @@
 from Module.carte import Carte
+from random import shuffle as molo
 class Un_paquet_cartes:
     
     # attibut qui va donnec les couleur des carte 
@@ -23,12 +24,19 @@ class Un_paquet_cartes:
                 for i in range(1,self.nombre+1):
                     self.paquet.append(Carte(c,i))
                     
-    #affiche la carte qui stoker dans la liste paquet de carte appelle paquet
-    def get_carte(self,n):
-        print(self.paquet[n])
     
-    def get_carte1(self,n:int):
-        print(self.paquet[n])
+    def get_carte(self,n:int) -> Carte:
+        """   Methode qui va distribuer le nombre de carte demander  
+            au joueur et au cas ou le joueur ne sais pas deposer de carte
+            elle va etre utilise comme une poche 
+        """
+        mini_paquet_n:Carte=[]
+        for i in range(0,n):
+            
+            mini_paquet_n.append(self.paquet[n])
+            self.paquet.pop(n)
+        
+        return mini_paquet_n
     
     #returne nombre de carte total 
     def get_nombre_carte(self):
@@ -47,3 +55,11 @@ class Un_paquet_cartes:
                 for v in range(val):
                     self.paquet.append(Carte(key))
     
+    def melanger_du_paquert(self):
+        """ 
+            methode qui va melanger le paquet de carte 
+        """
+        molo(self.paquet)
+    
+    def paquet_recupe(self,carte:Carte):
+        
