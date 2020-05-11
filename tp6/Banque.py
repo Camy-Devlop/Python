@@ -1,5 +1,6 @@
 
 import Module.Client
 
-class Banque():
-    pass
+class name:
+
+    print("bonjour bienvenu dans notre Banque")
