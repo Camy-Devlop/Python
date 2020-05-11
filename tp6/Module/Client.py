@@ -1,3 +1,3 @@
-import Module.Client
 
-class Banque():
+class Client():
+    pass
