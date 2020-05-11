@@ -1,6 +1,5 @@
 
-import Module.Client
-
 class name:
 
-    print("bonjour bienvenu dans notre Banque")
+    def __init__(self):
+        print("bonjour bienvenu dans notre Banque")
