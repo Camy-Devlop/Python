@@ -1,3 +1,4 @@
+from Module.Adresse import Adresse
 
 
 class Personne():
