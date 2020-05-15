@@ -8,8 +8,7 @@ class Adresse(object):
             :param pays: string le nom du payer ou la personne reside
             :param boite: string le numero de boite s'il y a une optionel
         """
-
-
+        
         self.nom_adresse:str=nom_adresse
         self.numero:int=numero
         self.boite:str=boite
