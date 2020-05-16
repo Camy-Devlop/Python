@@ -6,7 +6,8 @@ class Personne():
         self.nom:str=nom
         self.prenom:str=prenom
         self.adresse:Adresse=adresse
-
+        self.date_nee:date=date_naissance
+        self.lieux_nee:str=lieux_naissance
 
     def __str__(self):
         return self.nom+" "+self.prenom
