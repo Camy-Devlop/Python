@@ -9,7 +9,6 @@ class Compte():
         liste=[str(parti2),str(parti3),str(parti4)]
         cpt:int=0
         for t in range(0,len(liste)):
-            print (t)
             while len(liste[t]) > 4 or verif(liste[t])==False:
                     print("longueur du str {} et la valeur entre {}".format(len(liste[t]),liste[t]))
                     liste[t]=input("la valeur entre pour crée un compte doit contenir 4 chiffre \nveiller enrte 4 chiffres MAX :")

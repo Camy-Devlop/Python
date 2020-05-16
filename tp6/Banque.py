@@ -1,20 +1,21 @@
 
 
-import Module.Adresse
+from Module.Adresse import Adresse
+from Module.Client import Client
 from Module.Compte import Compte
 from Module.String_int import String_int
 from Module.Verifier import verifie_ischiffre as verif
 
-a=Module.Adresse.Adresse("avenue de l'expo. univer.",50,1083,"chichi","bruxelles")
-#print(a)
+adr=Adresse("avenue de l'expo. univer.",50,1083,"chichi","bruxelles")
+comp=Compte(String_int("BE",3),2934,9991,2100)
 
 #===================================================================================
-print(a)
+print(adr,"\n",comp)
 
 #===================================================================================
+print("============== Client ==============")
 
-comp=Compte(String_int("BE",3),2934,9991,21E00)
+client=Client("Adbaibi","Ismail",comp,adr)
 
-print(comp)
-print("=================================")
-
+print(client)
+print(client.get_adress())
