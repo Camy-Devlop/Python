@@ -1,9 +1,12 @@
+# coding:utf-8
+
 from Module.Adresse import Adresse
 from datetime import date
 
+
 class Personne():
 
-    def __init__(self,nom:str,prenom:str,adresse:Adresse,date_naissance:date,lieux_naissance:str):
+    def __init__(self, nom: str, prenom: str, adresse: Adresse, date_naissance: date, lieux_naissance: str):
         """
             va cree une base pour une personne avec son nom, nom prenom, son adresse, la date de naissance
             et le lieux de naissance
@@ -12,32 +15,40 @@ class Personne():
         :param adresse:  class Adresse permet de stocker l'adresse de la personne
         :param date_naissance: type Date permet de stoker la date de naissance
         :param lieux_naissance: lieu de naissance type string
+        :param format_date: permet definit comment la date de doit être retourner
         """
-        self.nom:str=nom
-        self.prenom:str=prenom
-        self.adresse:Adresse=adresse
-        self.date_nee:date=date_naissance
-        self.lieux_nee:str=lieux_naissance
-        self.format_date:str="%d/%m/%Y"
+        self.nom: str = nom
+        self.prenom: str = prenom
+        self.adresse: Adresse = adresse
+        self.date_nee: date = date_naissance
+        self.lieux_nee: str = lieux_naissance
+        self.format_date: str = "%d/%m/%Y"
 
     def __str__(self):
         """
             fonction general qui retourne un string
         :return: retourne le nom et le prenom de la personne
         """
-        return self.nom+" "+self.prenom
+        return self.nom + " " + self.prenom
 
-    def get_adress(self)->str:
+    def get_adress(self) -> str:
         """
         permet de retourner l'adresse de la personne
         :return: retourne l'adresse de la personne.
         """
         return self.adresse.__str__()
 
-
-    def get_date_nee(self)->str:
+    def get_date_nee(self) -> str:
+        """
+             retourne un chaine string pour la date de naissance
+             dans le format donnee avec la variable formate_date
+        :return: retourne un string de la date de naissance
+        """
         return self.date_nee.strftime(self.format_date)
 
-
-    def get_lieux_nee(self)->str:
+    def get_lieux_nee(self) -> str:
+        """
+         retourne un chaine string pour le lieux de naissance
+        :return: string lieu de naissance
+        """
         return self.lieux_nee
