@@ -11,10 +11,6 @@ ADRR=(SERVER,PORT)
 client=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 client.connect(ADRR)
 
-
-
-
-
 def send(msg):
     message=msg.encode(FORMAT)
     msg_length=len(message)
@@ -29,3 +25,5 @@ m=""
 while msg_fin!=m:
     m=input("entre un message ")
     send(m)
+
+send(DISCONNECT_MESSAGE)
