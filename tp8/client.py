@@ -11,6 +11,8 @@ ADRR=(SERVER,PORT)
 client=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 client.connect(ADRR)
 
+
+
 def send(msg):
     message=msg.encode(FORMAT)
     msg_length=len(message)
@@ -18,6 +20,8 @@ def send(msg):
     send_length+=b' '* (HEADER - len(send_length))
     client.send(send_length)
     client.send(message)
+    print(client.recv(2048).decode(FORMAT))
+    
 
 
 msg_fin="fin"
