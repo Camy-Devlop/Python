@@ -26,9 +26,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a559b56-e8f8-4730-836d-703e7c4b50e2" name="Default Changelist" comment="ok">
-      <change afterPath="$PROJECT_DIR$/Crypto.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Decrypto.py" afterDir="false" />
+    <list default="true" id="1a559b56-e8f8-4730-836d-703e7c4b50e2" name="Default Changelist" comment="nouveau projet">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Decrypto.py" beforeDir="false" afterPath="$PROJECT_DIR$/Decrypto.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,8 +55,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -90,7 +92,28 @@
       <option name="project" value="LOCAL" />
       <updated>1595290286072</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="nouveau projet">
+      <created>1595290677510</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1595290677510</updated>
+    </task>
+    <task id="LOCAL-00005" summary="nouveau projet">
+      <created>1595290731563</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1595290731563</updated>
+    </task>
+    <task id="LOCAL-00006" summary="nouveau projet">
+      <created>1595290743818</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1595290743818</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -120,9 +143,14 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="ok" />
+    <MESSAGE value="nouveau projet" />
+    <option name="LAST_COMMIT_MESSAGE" value="nouveau projet" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="235" y="131" key="Vcs.Push.Dialog.v2" timestamp="1595291234973">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="235" y="131" key="Vcs.Push.Dialog.v2/0.23.1280.777@0.23.1280.777" timestamp="1595291234973" />
     <state x="438" y="312" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595290553086">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
