@@ -2,8 +2,8 @@ from Constant import Constant
 
 class Decrypto():
 
-    def __init__(self, v:float):
-        self.v:float=v
+    def __init__(self, cle:int):
+        self.cle:int=cle
         self.lor=Constant().lor
 
     def test(self):
