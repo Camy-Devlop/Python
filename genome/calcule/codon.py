@@ -9,6 +9,7 @@ class Codon:
     def __init__(self, adn:str):
         self.adn=adn
         self.liste_codon_ref=(Fichier_codon()).get_liste_codon()
+        self.liste_codon_ref2=self.liste_codon_ref
         self.tab_adn_codon=[]
         self.separateur_codon()
 
