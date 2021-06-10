@@ -30,4 +30,6 @@ print(results)
 #r.affichage_N(15)
 #r.nombre_repeter(15)
 
-
+print("----------------------------------")
+ff="zeazeakednzednzoednzednazedk"
+print(ff.count("e"))

@@ -1,22 +1,13 @@
 class Calcule_ACGT():
 
     def compter_ACGT(self):
-        i=0
-        while self.chaine[i]!='#':
+        self.Anb=self.chaine.count(self.GROUP_ATCG[0])
+        self.Tnb=self.chaine.count(self.GROUP_ATCG[1])
+        self.Cnb+=self.chaine.count(self.GROUP_ATCG[2])
+        self.Gnb=self.chaine.count(self.GROUP_ATCG[3])
+        self.total_ACGT+=self.Anb+self.Tnb+self.Cnb+self.Gnb
 
-            if self.chaine[i]=='A':
-                self.Anb+=1
-            elif self.chaine[i]=='C':
-                self.Cnb+=1
-            elif self.chaine[i]=='G':
-                self.Gnb+=1
-            elif self.chaine[i]=='T':
-                self.Tnb+=1
-            
-            self.total_ACGT+=1
-            i+=1
-
-    def compte_AT_et_GC(self)->(float,float):
+    def compte_AT_GC(self)->(float,float):
         """
             il va compter le nombre de AT et GC dans la chaine d'ADN
 
@@ -36,6 +27,7 @@ class Calcule_ACGT():
         print("nombre de nucléotides:",self.total_ACGT)
     
     def __init__(self, chaine:str):
+        self.GROUP_ATCG="ATCG"
         self.chaine=chaine+'#'
         self.Anb=0
         self.Cnb=0
