@@ -10,3 +10,6 @@ untitled1/.packages
 *.pyc
 *.pyc
 genome/.DS_Store
+genome/.DS_Store
+genome/calcule/__pycache__/calcule_ACGT.cpython-38.pyc
+genome/calcule/__pycache__/codon.cpython-38.pyc
