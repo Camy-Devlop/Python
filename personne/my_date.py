@@ -33,7 +33,7 @@ class My_Date():
         else:
             return 0 #si 'est egale a 0 il est pas née mdr
 
-
+#Bonjour
 
     @property
     def combien_Jour_reste(self)->int:
