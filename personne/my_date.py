@@ -40,12 +40,12 @@ class My_Date():
         """
              jour_reste_aniversaire: methode getter qui va calculer le nombre de jour qui rest de la date anniversaire
          """
-        if datetime.now() > self.__date_naissance:
+        if datetime.now().month > self.__date_naissance.month:
+
             return (datetime(datetime.now().year+1,
                              self.__date_naissance.month,
                              self.__date_naissance.day)-datetime.now()).days+1
         else:
-            print(2)
             return (datetime(datetime.now().year,
                              self.__date_naissance.month,
-                                    self.__date_naissance.day) - datetime.now()).days + 1
+                                    self.__date_naissance.day) - datetime.now()).days +1
