@@ -3,7 +3,7 @@ import pytmx
 import pyscroll
 import io
 
-from player import Player
+from p import P
 
 
 class Game():
@@ -16,7 +16,7 @@ class Game():
         map_layer = pyscroll.orthographic.BufferedRenderer(map_data,self.screen.get_size())
         map_layer.zoom=2
 
-        self.player=Player(100,200)
+        self.player=P()
 
 
         self.groupe= pyscroll.PyscrollGroup(map_layer=map_layer,default_layer=3)
