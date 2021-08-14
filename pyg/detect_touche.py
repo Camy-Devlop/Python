@@ -21,3 +21,5 @@ class Detect_touche:
         if pressed[pygame.K_RIGHT]:
             position[0]+=1
         return position
+
+    #ddcdcs
