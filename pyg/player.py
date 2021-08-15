@@ -9,7 +9,7 @@ class Player(pygame.sprite.Sprite):
         self.tmx_data=tmx_data
         self.sprite_sheet = pygame.image.load('player.png')
         self.image=self.get_image(0,0)
-        self.image.set_colorkey([0,0,0])
+        #self.image.set_colorkey([0,0,0])
         self.rect = self.image.get_rect()
         self.feet=pygame.Rect(0,0,self.rect.width*0.5,12)
 
