@@ -14,7 +14,6 @@ class Game():
         self.screen = pygame.display.set_mode((800,600))
         pygame.display.set_caption("nouveau jeux")
         tmx_data = pytmx.util_pygame.load_pygame("carte1.tmx")
-
         map_data = pyscroll.data.TiledMapData(tmx_data)
         map_data.visible_object_layers
         map_layer = pyscroll.orthographic.BufferedRenderer(map_data,self.screen.get_size())
@@ -22,7 +21,6 @@ class Game():
         self.fps=60
 
         self.player=Player(30,40,tmx_data)
-
         self.walls = []
         for obj in tmx_data.objects:
             print( obj.type)
@@ -34,12 +32,19 @@ class Game():
         self.groupe.add(self.player)
         #self.player = pygame.image.load("player.png")
 
+    def update(self):
+        self.groupe.update()
+        for sprite in self.groupe.sprites():
+            if sprite.feet.collidelist(self.walls)> -1:
+                self.player.move_back()
+
     def run(self):
         running =True
         clock = pygame.time.Clock()
         while running:
 
-            self.groupe.update()
+            self.player.save_location()
+            self.update()
             self.groupe.center(self.player.rect)
             self.groupe.draw(self.screen)
             pygame.display.flip()

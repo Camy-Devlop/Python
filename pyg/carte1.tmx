@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="21">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="24">
  <tileset firstgid="1" source="nature.tsx"/>
  <layer id="1" name="background" width="50" height="50" locked="1">
   <data encoding="csv">
@@ -271,7 +271,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="6" name="Objects" locked="1">
+ <objectgroup id="6" name="Objects">
   <object id="1" name="player" x="174.667" y="119.667">
    <point/>
   </object>
@@ -287,5 +287,6 @@
   <object id="16" x="447.563" y="432.215" width="48.525" height="15.9174"/>
   <object id="17" x="176" y="623.304" width="272" height="15.9558"/>
   <object id="18" x="31.9115" y="592.26" width="96" height="47.5693"/>
+  <object id="23" type="collision" x="299.694" y="145.121" width="8.8963" height="9.45232"/>
  </objectgroup>
 </map>

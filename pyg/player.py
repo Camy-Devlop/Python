@@ -11,6 +11,7 @@ class Player(pygame.sprite.Sprite):
         self.image=self.get_image(0,0)
         self.image.set_colorkey([0,0,0])
         self.rect = self.image.get_rect()
+        self.feet=pygame.Rect(0,0,self.rect.width*0.5,12)
 
         self.images = {
             'down': self.get_image(0, 0),
@@ -23,14 +24,22 @@ class Player(pygame.sprite.Sprite):
 
 
         self.position=[x,y]
+        self.old_position = self.position.copy()
         self.touche = Detect_touche()
-
+    def save_location(self): self.old_position = self.position.copy()
 
     def update(self):
 
         position,image=self.touche.handl_imput(self.position)
         self.change_animation(image)
         self.rect.topleft = position
+        self.feet.midbottom=self.rect.midbottom
+
+    def move_back(self):
+        self.position = self.old_position
+        self.rect.topleft = self.position
+        self.feet.midbottom = self.rect.midbottom
+
 
 
     def get_image(self,x,y):
