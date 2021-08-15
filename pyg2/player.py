@@ -1,55 +1,50 @@
 import pygame
-import pytmx
-import pyscroll
-import os
-import arcade
+
+from detect_touche import Detect_touche
 
 
-from player import Player
+class Player(pygame.sprite.Sprite):
+    def __init__(self,x,y,tmx_data):
+        super().__init__()
+        self.tmx_data=tmx_data
+        self.sprite_sheet = pygame.image.load('player.png')
+        self.image=self.get_image(0,0)
+        #self.image.set_colorkey([0,0,0])
+        self.rect = self.image.get_rect()
+        self.feet=pygame.Rect(0,0,self.rect.width*0.5,12)
+
+        self.images = {
+            'down': self.get_image(0, 0),
+            'left': self.get_image(0, 32),
+            'right': self.get_image(0, 64),
+            'up': self.get_image(0, 96)
+        }
+
+        self.speed = 1
 
 
-class Game():
-
-    def __init__(self):
-        self.screen = pygame.display.set_mode((800,600))
-        pygame.display.set_caption("nouveau jeux")
-        tmx_data = pytmx.util_pygame.load_pygame("carte1.tmx",pixelalpha=True)
-        map_data = pyscroll.data.TiledMapData(tmx_data)
-        map_data.visible_object_layers
-        map_layer = pyscroll.orthographic.BufferedRenderer(map_data,self.screen.get_size())
-        map_layer.zoom=2
-        self.fps=60
-
-        self.player=Player(30,40,tmx_data)
-        self.walls = []
-        for obj in tmx_data.objects:
-            print( obj.type)
-            if obj.type == "collision":
-                self.walls.append(pygame.Rect(obj.x, obj.y, obj.width, obj.height))
-
-
-        self.groupe= pyscroll.PyscrollGroup(map_layer=map_layer,default_layer=4)
-        self.groupe.add(self.player)
-        #self.player = pygame.image.load("player.png")
+        self.position=[x,y]
+        self.old_position = self.position.copy()
+        self.touche = Detect_touche()
+    def save_location(self): self.old_position = self.position.copy()
 
     def update(self):
-        self.groupe.update()
-        for sprite in self.groupe.sprites():
-            if sprite.feet.collidelist(self.walls)> -1:
-                self.player.move_back()
 
-    def run(self):
-        running =True
-        clock = pygame.time.Clock()
-        while running:
+        position,image=self.touche.handl_imput(self.position)
+        self.change_animation(image)
+        self.rect.topleft = position
+        self.feet.midbottom=self.rect.midbottom
 
-            self.player.save_location()
-            self.update()
-            self.groupe.center(self.player.rect)
-            self.groupe.draw(self.screen)
-            pygame.display.flip()
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    running = False
-        self.clock.tick(self.fps)
-        pygame.quit()
+    def move_back(self):
+        self.position = self.old_position
+        self.rect.topleft = self.position
+        self.feet.midbottom = self.rect.midbottom
+
+
+
+    def get_image(self,x,y):
+        image=pygame.Surface([32,32])
+        image.blit(self.sprite_sheet,(0,0),(x,y,32,32))
+        return image
+
+    def change_animation(self, name): self.image = self.images[name]
