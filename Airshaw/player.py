@@ -16,8 +16,7 @@ class Player(pygame.sprite.Sprite):
 
     def move_right(self):
         print(self.rect)
-        if self.rect.x>0:
-            self.rect.x += self.velocity
+        self.rect.x += self.velocity
 
 
     def move_left(self):
