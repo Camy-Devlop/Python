@@ -12,7 +12,7 @@ class Game:
 
     def run(self):
         running = True
-
+        clock = pygame.time.Clock()
         while running:
 
             self.screen.blit(self.background, (0, -200))
@@ -37,3 +37,4 @@ class Game:
                     self.pressed[event.key] = True
                 elif event.type == pygame.KEYUP:
                     self.pressed[event.key] = False
+            clock.tick(60)
