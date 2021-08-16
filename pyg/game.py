@@ -14,6 +14,7 @@ class Game():
         self.screen = pygame.display.set_mode((800,600))
         pygame.display.set_caption("nouveau jeux")
         tmx_data = pytmx.util_pygame.load_pygame("carte1.tmx",pixelalpha=True)
+
         map_data = pyscroll.data.TiledMapData(tmx_data)
         map_data.visible_object_layers
         map_layer = pyscroll.orthographic.BufferedRenderer(map_data,self.screen.get_size())
