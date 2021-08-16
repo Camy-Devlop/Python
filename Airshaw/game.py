@@ -37,4 +37,4 @@ class Game:
                     self.pressed[event.key] = True
                 elif event.type == pygame.KEYUP:
                     self.pressed[event.key] = False
-            clock.tick(60)
+            clock.tick(60) #dsfdfs
