@@ -22,7 +22,7 @@ class Game:
 
             if self.pressed.get(pygame.K_d):
                 self.player.move_right()
-            elif self.pressed.get(pygame.K_q):
+            elif self.pressed.get(pygame.K_q) and self.player.rect.x>0:
                 self.player.move_left()
 
             pygame.display.flip()
