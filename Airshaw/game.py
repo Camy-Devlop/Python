@@ -19,10 +19,12 @@ class Game:
             # print(game.pressed)
             self.screen.blit(self.player.image, self.player.rect)
             # print(player.rect)
+            self.player.all_projectile.draw(self.screen)
 
             if self.pressed.get(pygame.K_d) and self.player.rect.x+self.player.rect.width<self.screen.get_width() :
                 self.player.move_right()
-            elif self.pressed.get(pygame.K_q) and self.player.rect.x>0:
+            elif self.pressed.get(pygame.K_q) and self.player.rect.x>-30:
+                print(self.player.rect.x)
                 self.player.move_left()
 
             pygame.display.flip()
@@ -35,6 +37,10 @@ class Game:
 
                 elif event.type == pygame.KEYDOWN:
                     self.pressed[event.key] = True
+
+                    if event.key == pygame.K_ESCAPE:
+                        self.player.launch_projectile()
+
                 elif event.type == pygame.KEYUP:
                     self.pressed[event.key] = False
             clock.tick(60) #dsfdfs
