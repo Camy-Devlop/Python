@@ -33,9 +33,10 @@ class Game():
         self.groupe.add(self.player)
         #self.player = pygame.image.load("player.png")
 
-        #dectect l'entre e la maison
+        #rectanle de collision pour dectect l'entre e la maison
         enter_house=tmx_data.get_object_by_name("enter_house")
         self.enter_house_rect= pygame.Rect(enter_house.x,enter_house.y,enter_house.width,enter_house.height)
+
     #chargement de la maison
     def switch_house(self):
 
@@ -54,7 +55,7 @@ class Game():
        #
         enter_house = tmx_data.get_object_by_name("exit_house")
         self.enter_house_rect = pygame.Rect(enter_house.x, enter_house.y, enter_house.width, enter_house.height)
-        spawn_house_point = tmx_data.get_object_by_name("enter_house")
+        spawn_house_point = tmx_data.get_object_by_name("spawn_house")
         self.player.position[0] = spawn_house_point.x
         self.player.position[1] = spawn_house_point.y - 20
 
@@ -77,13 +78,14 @@ class Game():
         enter_house = tmx_data.get_object_by_name("enter_house")
         self.enter_house_rect = pygame.Rect(enter_house.x, enter_house.y, enter_house.width, enter_house.height)
         spawn_house_point= tmx_data.get_object_by_name("enter_house_exit")
+
         self.player.position[0] = spawn_house_point.x
         self.player.position[1] = spawn_house_point.y - 20
 
     def update(self):
         self.groupe.update()
 
-        if self.map == "world" and self.player.feet.colliderect(self.enter_house_rect):
+        if self.player.feet.colliderect(self.enter_house_rect):
             self.switch_house()
             self.map = 'house'
         if self.map == "house" and self.player.feet.colliderect(self.enter_house_rect):
