@@ -437,7 +437,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="19" name="Objects">
+ <objectgroup id="19" name="Objects" locked="1">
   <object id="1" type="collision" x="70.7608" y="151.427" width="43.9059" height="34.5726"/>
   <object id="2" type="collision" x="236.473" y="171.2" width="31.4916" height="32.6367"/>
   <object id="3" type="collision" x="334.383" y="60.6928" width="12.5966" height="29.2013"/>
@@ -454,7 +454,7 @@
   <object id="15" type="collision" x="351.808" y="48.1067" width="16.0492" height="303.922"/>
   <object id="16" type="collision" x="47.9227" y="352.057" width="320.155" height="15.8332"/>
   <object id="17" name="exit_house" x="98.25" y="338.211" width="27.7412" height="13.8706"/>
-  <object id="18" name="spawn_house" x="112.583" y="329.195">
+  <object id="18" name="spawn_house" x="113.672" y="280.177">
    <point/>
   </object>
  </objectgroup>

@@ -718,7 +718,7 @@
    <point/>
   </object>
   <object id="145" name="enter_house" x="90.1818" y="322.068" width="15.7955" height="25.2955"/>
-  <object id="146" name="enter_house_exit" x="98.4398" y="360.912">
+  <object id="146" name="enter_house_exit" x="100.108" y="368.696">
    <point/>
   </object>
   <object id="147" type="collision" x="488.796" y="733.827" width="14.9499" height="11.9746"/>
