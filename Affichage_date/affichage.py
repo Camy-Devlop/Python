@@ -17,21 +17,20 @@ class Affichage:
         print("{0} {1}".format(mois_anne[mois], anne))  # affiche le le mois et l'année
         print(ligne_separation)  # une ligne de separation
         print(d := "  ".join(__ for _, __ in jour_semaine.items()))
+
         for i in self.__tab_nb_1_to_mois_str(nb_jour):
-            print(i)
+                print(i)
         print(ligne_separation)
 
     def __tab_nb_1_to_mois_str(self, nb):
         tab = []
         tab2 = []
-        for i in range(1, self.jour):
-            tab.append(" " * 5)
+        for i in range(1, self.jour):tab.append(" " * 5)
 
-        for i in range(1, nb + 1):
-            tab.append(get_day_str(i) + "   ")
+        for i in range(1, nb + 1):tab.append(get_day_str(i) + "   ")
 
-        for i in range(0, nb + self.jour, 7):
-            tab2.append("".join(tab[i:i + 7]))
+        for i in range(0, nb + self.jour, 7):tab2.append("".join(tab[i:i + 7]))
+
         return tab2
 
 

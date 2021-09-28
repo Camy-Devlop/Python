@@ -652,7 +652,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="6" name="Objects">
+ <objectgroup id="6" name="Objects" locked="1">
   <object id="2" type="collision" x="2.66667" y="0.269379" width="797.798" height="31.1616"/>
   <object id="3" type="collision" x="0.134684" y="34.0437" width="32.0303" height="733.7"/>
   <object id="4" type="collision" x="0" y="768" width="800" height="31.5353"/>

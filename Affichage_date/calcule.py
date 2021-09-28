@@ -27,7 +27,16 @@ def isLeap_year(year: int) -> bool:
 
 
 def day_in_month(month: int, year: int) -> int:
-    # TODO A FAIRE
+    """
+    :methode day_in_month: elle va donne le nombre de jour dans un mois
+                            grace au paramettre month il va aller cherche dans sont tableau
+                            attention pour comprend le mois de fevrier il va faire un test
+                            pour voir si c'est un jour bissextile il aura deux solution
+                            soit 28 ou 29
+    :param month: permettre de determine quelle valeur va etre donne dans le tableau
+    :param year: va permettre de determiner si le mois de fevvrier est bisextile ou pas
+    :return: retourne nombre de jour
+    """
     return (
     {1: 31, 2: 29 if isLeap_year(year) == True else 28, 3: 31, 4: 30, 5: 31, 6: 30, 7: 31, 8: 31, 9: 30, 10: 31, 11: 30,
      12: 31})[month]

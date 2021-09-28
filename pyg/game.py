@@ -1,8 +1,7 @@
 import pygame
 import pytmx
 import pyscroll
-import os
-import arcade
+
 
 
 from player import Player
@@ -35,6 +34,7 @@ class Game():
 
         #rectanle de collision pour dectect l'entre e la maison
         enter_house=tmx_data.get_object_by_name("enter_house")
+        print(tmx_data.get_object_by_name("enter_house").x)
         self.enter_house_rect= pygame.Rect(enter_house.x,enter_house.y,enter_house.width,enter_house.height)
 
     #chargement de la maison
@@ -124,5 +124,5 @@ class Game():
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
-        self.clock.tick(self.fps)
+        clock.tick(self.fps)
         pygame.quit()
