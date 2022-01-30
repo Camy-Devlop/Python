@@ -1,3 +1,13 @@
+"""
+"   author : adbaibi ismail
+"   date : 29/01/2022
+"   petit programme qui va cherche le plus petit
+"   combinaison char dans sting et retourner un string
+"   ex: donne en parametre deux String ahffaksfajeeubsne et jefaa
+"       la reponce en string est aksfaje
+"""
+
+
 def MinWindowSubstring(strArr):
     class Mot:
         def __init__(self, mots:list):
