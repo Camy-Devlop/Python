@@ -5,8 +5,6 @@ def MinWindowSubstring(strArr):
             self._K =mots[1]
             self._debut: int = 0
             self._fin: int = 0
-
-
             self.recherche()
 
         def __str__(self):
